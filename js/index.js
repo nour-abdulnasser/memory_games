@@ -5,7 +5,7 @@ function random_num(num_length) {
    
 }
 
-function num_mem_init(num_length, time_length){
+function num_mem_init(){
     const  num_length = document.getElementById("numbers").value;
     const  time_length = document.getElementById("time").value;
     var num = document.getElementById("display");
