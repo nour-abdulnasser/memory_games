@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <!-- <head></head> -->
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
         <div id="prompt">
+            <script src="./js/index.js"></script>
             <h1>Memory Trainer</h1>
-        <hr/>
-        <h2>Memorizing Numbers</h2>
-        
-        <script src="./js/index.js"></script>
-        
-        <label for="numbers">How many digits?</label> <br/>
-        <input type="number" id="numbers"/>
-        <br/><br/>
-        <label for="time">How much time to memorize (in seconds)?</label>
-        <br/>
-        <input type="number" id="time"/>
-        <br/><br/>
-        <button type="button" onclick="num_mem_init()" id="start_button">Start</button>
-        <br/>
-        <p id="display" >Number</p>
-        <input type="number" name="memorized_num" id="input_test">
-            <button onclick="check()">Submit</button>
-            <p id="check_disp">check</p>
+            <hr/>
+            <div class="page-focus">
+                <h2 class="game-title">Memorizing Numbers</h2>
+                <label for="numbers" id="numbers_label">How many digits?</label> <br/>
+                <input type="number" id="numbers" class="input-length"/>
+                <br/><br/>
+                <label for="time" id="time_label">How much time to memorize (in seconds)?</label>
+                <br/>
+                <input type="number" id="time" class="input-time"/>
+                <br/><br/>
+                <button onclick="num_mem_init()" id="start_button" class="start-button">Start</button>
+                <br/>
+                <p id="display" class="num-disp"></p>
+                <input type="number" name="memorized_num" id="input_test" class="input-num" style="display: none;"/>
+                <button onclick="check()" id="submit_button" class="submit-button" style="display: none;">Submit</button>
+                <p id="check_disp"></p>
+        </div>
         <!-- <input type="number" name="memorized_num" id="input_test">
         <button onclick="check()">Submit</button>
         <p id="check_disp">check</p> -->
