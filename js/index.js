@@ -26,10 +26,8 @@ function num_mem_init(){
     num.innerHTML = random_nums();
     localStorage.setItem('mr_randy', num.innerHTML);
     setTimeout(
-        my_url()
-        , time_length*1000); 
-    
-    
+        my_url
+        , time_length*1000);
 }
 
 function my_url(){
