@@ -20,6 +20,8 @@ function random_nums(){
 
 function num_mem_init(){
     // const  num_length = document.getElementById("numbers").value;
+    var butt = document.getElementById('start_button');
+    butt.style.display = 'none';
     const  time_length = document.getElementById("time").value;
     var num = document.getElementById("display");
     // randy = random_nums();
@@ -35,6 +37,7 @@ function my_url(){
 }
 
 function check(){
+    
     const input_num = document.getElementById("input_test").value;
     // const  num_length = document.getElementById("numbers").value;
 
