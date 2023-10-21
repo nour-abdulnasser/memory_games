@@ -26,22 +26,25 @@ function num_mem_init(){
     var num = document.getElementById("display");
     // randy = random_nums();
     num.innerHTML = random_nums();
-    localStorage.setItem('mr_randy', num.innerHTML);
+    // localStorage.setItem('mr_randy', num.innerHTML); // used for storing value to pass between pages
     setTimeout(
-        my_url
+        function()
+        {
+        num.innerHTML = "Time's up!";
+        }
         , time_length*1000);
 }
 
-function my_url(){
-    document.location.href='two.html';
-}
+// function my_url(){
+//     document.location.href='two.html'; // used to have a two.html file to redirect to
+// }
 
 function check(){
     
     const input_num = document.getElementById("input_test").value;
     // const  num_length = document.getElementById("numbers").value;
 
-    if (input_num == localStorage.getItem('mr_randy')) {
+    if (input_num == randy) {
         document.getElementById("check_disp").innerHTML = "well done";
     } else {
         document.getElementById("check_disp").innerHTML = "nope. good luck next time";
