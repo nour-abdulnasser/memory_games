@@ -16,12 +16,15 @@ function random_nums(){
     return randy;
 }
 
+
+
 function num_mem_init(){
     // const  num_length = document.getElementById("numbers").value;
     const  time_length = document.getElementById("time").value;
     var num = document.getElementById("display");
     // randy = random_nums();
     num.innerHTML = random_nums();
+    localStorage.setItem('mr_randy', num.innerHTML);
     setTimeout(
         my_url()
         , time_length*1000); 
@@ -37,7 +40,7 @@ function check(){
     const input_num = document.getElementById("input_test").value;
     // const  num_length = document.getElementById("numbers").value;
 
-    if (input_num == randy) {
+    if (input_num == localStorage.getItem('mr_randy')) {
         document.getElementById("check_disp").innerHTML = "well done";
     } else {
         document.getElementById("check_disp").innerHTML = "nope. good luck next time";
