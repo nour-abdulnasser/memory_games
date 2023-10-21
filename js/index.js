@@ -23,12 +23,14 @@ function num_mem_init(){
     // randy = random_nums();
     num.innerHTML = random_nums();
     setTimeout(
-        function()
-        {
-        num.innerHTML = "Time's up!";
-        }
+        my_url()
         , time_length*1000); 
     
+    
+}
+
+function my_url(){
+    document.location.href='two.html';
 }
 
 function check(){
