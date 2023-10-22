@@ -2,31 +2,48 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="prompt">
             <script src="./js/index.js"></script>
             <h1>Memory Trainer</h1>
-            <hr/>
+            <h2 class="game-title">Memorizing Numbers</h2>
+            <hr color="#5a6f95"/>
             <div class="page-focus">
-                <h2 class="game-title">Memorizing Numbers</h2>
                 <label for="numbers" id="numbers_label">How many digits?</label> <br/>
-                <input type="number" id="numbers" class="input-length"/>
+                <input required type="number" id="numbers" class="input-length"/>
                 <br/><br/>
                 <label for="time" id="time_label">How much time to memorize (in seconds)?</label>
                 <br/>
-                <input type="number" id="time" class="input-time"/>
+                <input required type="number" id="time" class="input-time"/>
                 <br/><br/>
                 <button onclick="num_mem_init()" id="start_button" class="start-button">Start</button>
                 <br/>
-                <p id="display" class="num-disp"></p>
-                <input type="number" name="memorized_num" id="input_test" class="input-num" style="display: none;"/>
+                <div class="show-hide">
+                    <p id="display"  class="num-disp"></p>
+                    <input type="number" name="memorized_num" id="input_test" class="input-num" style="display: none;"/>
+                <br/><br/>
                 <button onclick="check()" id="submit_button" class="submit-button" style="display: none;">Submit</button>
-                <p id="check_disp"></p>
-        </div>
-        <!-- <input type="number" name="memorized_num" id="input_test">
-        <button onclick="check()">Submit</button>
-        <p id="check_disp">check</p> -->
-        </div>
+                <!-- <p id="check_disp" class="check-disp"></p> -->
+                </div>
+                <!-- <input type="number" name="memorized_num" id="input_test" class="input-num" style="display: none;"/>
+                <br/><br/>
+                <button onclick="check()" id="submit_button" class="submit-button" style="display: none;">Submit</button> -->
+                <p id="check_disp" class="check-disp"></p>
+                <!-- <p id="mistake" class="mistake"></p>
+                <p id="correction" class="correction"></p> -->
+                <br>
+                <hr color="#5a6f95"/>
+                <p id="mistake" class="mistake"></p>
+                <p id="correction" class="correction"></p>
+                <!-- <input type="number" name="memorized_num" id="input_test">
+                <button onclick="check()">Submit</button>
+                <p id="check_disp">check</p> -->
+                </div>
+        
+    </div>
     </body>
     </html>

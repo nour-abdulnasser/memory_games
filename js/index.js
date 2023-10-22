@@ -22,6 +22,8 @@ function num_mem_init(){
     const  time_length = document.getElementById("time").value;
     var butt = document.getElementById('start_button');
     butt.style.display = 'none';
+    document.getElementById("mistake").innerHTML = "";
+    document.getElementById("correction").innerHTML = "";
     document.getElementById("display").style.display='block';
     document.getElementById("time").style.display='none';
     document.getElementById("time_label").style.display='none';
@@ -67,10 +69,15 @@ function check(){
     // const  num_length = document.getElementById("numbers").value;
 
     if (input_num == randy) {
-        document.getElementById("check_disp").innerHTML = "well done";
+        document.getElementById("check_disp").style.color = "#00e308";
+        document.getElementById("check_disp").innerHTML = "Well done!!";
     } else {
-        document.getElementById("check_disp").innerHTML = "nope. good luck next time";
+        document.getElementById("check_disp").innerHTML = "Nope :(";
+        document.getElementById("check_disp").style.color = "#ae0000";
+        document.getElementById("mistake").innerHTML = "Your Answer: "+input_num.toString();
+        document.getElementById("correction").innerHTML = "Correct Answer: "+randy;
     }
+
     document.getElementById("input_test").value="";
     // document.getElementById("display").style.display='none';
     butt.style.display = 'inline';

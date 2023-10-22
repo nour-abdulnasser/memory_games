@@ -1,3 +1,100 @@
+body{
+    background-color: #232D3F;
+    font-family: 'Roboto Mono', monospace;
+    margin: auto;
+    
+    word-wrap:break-word;
+}
+h1{
+    color: #5a6f95;
+    line-height: 4vh;
+    margin-left: 2vb;
+}
+.game-title{
+    color: #83a684;
+    margin-left: 2vb;
+}
 .page-focus{
+    /* background-color: #fff; //to check size */
+    position:relative;
+    top: 2vh;
+    /* bottom: 10vh; */
+    /* left: 50%; */
+    /* margin-top: -50px; */
+    /* margin-left: -50px; */
     text-align: center;
+    color: #83a684;
+}
+label{
+    /* background-color: aqua; */
+    /* padding: 10px 10px; */
+    font-size: 20px;
+    font-weight: 700;
+}
+
+input[type=number] {
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #5e6f8e;
+    /* background-color: #232D3F; */
+    padding: 10px;
+    width: 70%;
+    font-size: 48px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box ;
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus { 
+    outline:none;
+    border-color: #b8d7b9;
+    box-shadow:0 0 10px #b8d7b9;
+}
+button{
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 10px;
+    color: #004401;
+    background-color: rgb(136, 136, 0);
+}
+button:hover{
+    color: #0d620f;
+    background-color: rgb(200, 200, 0);
+}
+.show-hide{
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    /* top: -10px; */
+    width: 100%;
+    text-align: center;
+    /* top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: #cb0606; //to check size */
+    margin: auto;
+}
+.check-disp{
+    font-weight: 900;
+    /* font-size: 40px; */
+    font-size: 20px;
+}
+.correction{
+    font-size: 20px;
+}
+.mistake{
+    font-size: 20px;
+    color: #ae0000;
 }
